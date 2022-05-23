@@ -10,9 +10,7 @@ import SwiftUI
 
 struct CabinetView: View {
     var body: some View {
-        VStack{
-            
-        }.navigationTitle("Armadietto")
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
