@@ -4,6 +4,7 @@
 //
 //  Created by Francesco on 23/05/22.
 //
+// The Main View
 
 import SwiftUI
 

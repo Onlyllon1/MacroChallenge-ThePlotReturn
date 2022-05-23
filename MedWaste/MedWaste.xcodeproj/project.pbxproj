@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		272A1882283B9FBC008E1CDF /* CabinetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272A1881283B9FBC008E1CDF /* CabinetView.swift */; };
+		272A1886283B9FDA008E1CDF /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272A1885283B9FDA008E1CDF /* SummaryView.swift */; };
+		272A1888283B9FE9008E1CDF /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272A1887283B9FE9008E1CDF /* StatisticsView.swift */; };
+		272A188A283BA008008E1CDF /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272A1889283BA008008E1CDF /* CustomColors.swift */; };
+		272A188E283BA052008E1CDF /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272A188D283BA052008E1CDF /* AlertView.swift */; };
+		272A1890283BA063008E1CDF /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272A188F283BA063008E1CDF /* ScanView.swift */; };
+		272A1892283BA073008E1CDF /* NewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272A1891283BA073008E1CDF /* NewItemView.swift */; };
+		272A1894283BA082008E1CDF /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272A1893283BA082008E1CDF /* MapView.swift */; };
+		272A1899283BA117008E1CDF /* MedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272A1898283BA117008E1CDF /* MedCardView.swift */; };
 		3C19F342283B9BBA00164F60 /* MedWasteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C19F341283B9BBA00164F60 /* MedWasteApp.swift */; };
 		3C19F344283B9BBA00164F60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C19F343283B9BBA00164F60 /* ContentView.swift */; };
 		3C19F346283B9BBB00164F60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C19F345283B9BBB00164F60 /* Assets.xcassets */; };
@@ -14,6 +23,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		272A1881283B9FBC008E1CDF /* CabinetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabinetView.swift; sourceTree = "<group>"; };
+		272A1885283B9FDA008E1CDF /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		272A1887283B9FE9008E1CDF /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		272A1889283BA008008E1CDF /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
+		272A188D283BA052008E1CDF /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		272A188F283BA063008E1CDF /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
+		272A1891283BA073008E1CDF /* NewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemView.swift; sourceTree = "<group>"; };
+		272A1893283BA082008E1CDF /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		272A1898283BA117008E1CDF /* MedCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedCardView.swift; sourceTree = "<group>"; };
 		3C19F33E283B9BBA00164F60 /* MedWaste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedWaste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C19F341283B9BBA00164F60 /* MedWasteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedWasteApp.swift; sourceTree = "<group>"; };
 		3C19F343283B9BBA00164F60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +50,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		272A1883283B9FC0008E1CDF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				272A1897283BA0D8008E1CDF /* Sheets */,
+				272A188C283BA021008E1CDF /* Cards */,
+				272A188B283BA016008E1CDF /* Main */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		272A1884283B9FC8008E1CDF /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				272A1889283BA008008E1CDF /* CustomColors.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		272A188B283BA016008E1CDF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				272A1881283B9FBC008E1CDF /* CabinetView.swift */,
+				3C19F343283B9BBA00164F60 /* ContentView.swift */,
+				272A1885283B9FDA008E1CDF /* SummaryView.swift */,
+				272A1887283B9FE9008E1CDF /* StatisticsView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		272A188C283BA021008E1CDF /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				272A1898283BA117008E1CDF /* MedCardView.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		272A1895283BA089008E1CDF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		272A1896283BA0B2008E1CDF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		272A1897283BA0D8008E1CDF /* Sheets */ = {
+			isa = PBXGroup;
+			children = (
+				272A188D283BA052008E1CDF /* AlertView.swift */,
+				272A188F283BA063008E1CDF /* ScanView.swift */,
+				272A1891283BA073008E1CDF /* NewItemView.swift */,
+				272A1893283BA082008E1CDF /* MapView.swift */,
+			);
+			path = Sheets;
+			sourceTree = "<group>";
+		};
 		3C19F335283B9BBA00164F60 = {
 			isa = PBXGroup;
 			children = (
@@ -52,8 +132,11 @@
 			isa = PBXGroup;
 			children = (
 				3C19F341283B9BBA00164F60 /* MedWasteApp.swift */,
-				3C19F343283B9BBA00164F60 /* ContentView.swift */,
+				272A1896283BA0B2008E1CDF /* ViewModels */,
 				3C19F345283B9BBB00164F60 /* Assets.xcassets */,
+				272A1883283B9FC0008E1CDF /* Views */,
+				272A1884283B9FC8008E1CDF /* Constants */,
+				272A1895283BA089008E1CDF /* Models */,
 				3C19F347283B9BBB00164F60 /* Preview Content */,
 			);
 			path = MedWaste;
@@ -137,7 +220,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				272A1892283BA073008E1CDF /* NewItemView.swift in Sources */,
 				3C19F344283B9BBA00164F60 /* ContentView.swift in Sources */,
+				272A1899283BA117008E1CDF /* MedCardView.swift in Sources */,
+				272A1890283BA063008E1CDF /* ScanView.swift in Sources */,
+				272A1888283B9FE9008E1CDF /* StatisticsView.swift in Sources */,
+				272A188E283BA052008E1CDF /* AlertView.swift in Sources */,
+				272A1886283B9FDA008E1CDF /* SummaryView.swift in Sources */,
+				272A1882283B9FBC008E1CDF /* CabinetView.swift in Sources */,
+				272A1894283BA082008E1CDF /* MapView.swift in Sources */,
+				272A188A283BA008008E1CDF /* CustomColors.swift in Sources */,
 				3C19F342283B9BBA00164F60 /* MedWasteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
