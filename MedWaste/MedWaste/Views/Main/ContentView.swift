@@ -10,11 +10,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-       VStack
-        {
-            Text("Primo Git!")
-            Text("SecondoGit")
-            .padding()}
+        NavigationView{
+            TabView(){
+                SummaryView()
+                    .tabItem {Label("Riepilogo", systemImage: "square.grid.2x2.fill")}
+                CabinetView()
+                    .tabItem {Label("Armadietto", systemImage: "heart.text.square.fill")}
+                StatisticsView()
+                    .tabItem {Label("Statistiche", systemImage: "chart.pie.fill")}
+            }
+        }
     }
 }
 
