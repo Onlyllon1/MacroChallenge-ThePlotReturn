@@ -11,7 +11,27 @@ import SwiftUI
 
 struct MedCardView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+        RoundedRectangle(cornerRadius: 20, style: .continuous)
+                .foregroundColor(CustomColor.medcardgray)
+            .fixedSize(horizontal: false, vertical: false)
+            .shadow(color: .gray, radius: 2, x: 0, y: 2)
+        VStack(alignment: .center, spacing: 10){
+            Image("pills").resizable().scaledToFit()
+            RoundedRectangle(cornerRadius: 20).fixedSize(horizontal: false, vertical: true)
+            HStack{
+                Text("Ayrinal").font(.title3).fontWeight(.bold).textCase(.uppercase)
+                Spacer()
+                Text ("20mg")
+            }
+            HStack{
+            Text("Antistamine")
+            Spacer()
+            }
+           
+        }.padding()
+        
+    }
     }
 }
 

@@ -6,3 +6,10 @@
 //
 
 import Foundation
+import SwiftUI
+
+
+struct CustomColor {
+    static let darkblue = Color("DarkBlue")
+    static let medcardgray = Color("MedCardGray")
+}

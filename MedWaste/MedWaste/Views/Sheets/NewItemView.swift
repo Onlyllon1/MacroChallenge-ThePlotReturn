@@ -9,13 +9,30 @@
 import SwiftUI
 
 struct NewItemView: View {
+//var name : String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack{
+        VStack(alignment: .leading, spacing: 10){
+            Text("Name")
+            Text("Dosage")
+            Text("Type")
+            Text("Price")
+        }
+            VStack(alignment: .leading, spacing: 10){
+                Text("Name")
+                Text("Dosage")
+                Text("Type")
+                Text("Price")
+            }
+//            TextField("Name", text: name)
+        }.navigationTitle("New Item")
+        
     }
 }
 
 struct NewItemView_Previews: PreviewProvider {
     static var previews: some View {
         NewItemView()
+            .previewDevice("iPhone 13 Pro Max")
     }
 }
