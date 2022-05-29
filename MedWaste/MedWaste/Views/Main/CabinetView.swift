@@ -31,7 +31,8 @@ struct CabinetView: View {
                            }
                }
        //                    .padding(.horizontal)
-               }.searchable(text: $searchQuery)
+               }
+//               .searchable(text: $searchQuery)
     }
     }
 }
