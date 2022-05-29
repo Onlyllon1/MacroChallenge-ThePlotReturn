@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showScanner = false
+    @State private var showMap = false
     
     @State var tabSelection: Tabs = .tab1
     
@@ -16,9 +18,9 @@ struct ContentView: View {
     
     func returnNaviBarTitle(tabSelection: Tabs) -> String{
         switch tabSelection{
-            case .tab1: return "Riepilogo"
-            case .tab2: return "Armadietto"
-            case .tab3: return "Statistiche"
+        case .tab1: return "Riepilogo"
+        case .tab2: return "Armadietto"
+        case .tab3: return "Statistiche"
         }
     }
     
@@ -35,7 +37,16 @@ struct ContentView: View {
                     .tabItem {Label("Statistiche", systemImage: "chart.pie.fill")}
                     .tag(Tabs.tab3)
             }.navigationBarTitle(returnNaviBarTitle(tabSelection: self.tabSelection))
-        }
+            
+                .navigationBarItems(trailing:
+                                        HStack(spacing: 20){
+                    Button(action: { showMap = true }, label: { Image(systemName: "map.circle.fill").scaleEffect(1.5)})
+                    Button(action: {showScanner = true }, label: { Image(systemName: "plus.circle.fill").foregroundColor(.blue).scaleEffect(1.5)})
+                }
+                )
+            
+        } .sheet(isPresented: $showMap, content: {MapView()})
+                    .sheet(isPresented: $showScanner, content: {NewItemView()})
     }
 }
 
@@ -44,3 +55,6 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
+
