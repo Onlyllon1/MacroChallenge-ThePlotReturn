@@ -9,23 +9,33 @@
 import SwiftUI
 
 struct NewItemView: View {
+    @ObservedObject var recognizedContent = RecognizedContent()
 //var name : String
     var body: some View {
-        HStack{
-        VStack(alignment: .leading, spacing: 10){
-            Text("Name")
-            Text("Dosage")
-            Text("Type")
-            Text("Price")
-        }
-            VStack(alignment: .leading, spacing: 10){
-                Text("Name")
-                Text("Dosage")
-                Text("Type")
-                Text("Price")
+        ZStack(alignment: .bottom) {
+            List(recognizedContent.items, id: \.id) { textItem in
+                
+                    Text(String(textItem.text.prefix(50)).appending("..."))
+                
             }
-//            TextField("Name", text: name)
-        }.navigationTitle("New Item")
+        }
+        
+//        HStack{
+//        VStack(alignment: .leading, spacing: 10){
+//            Text("Name")
+//            Text("Dosage")
+//            Text("Type")
+//            Text("Price")
+//        }
+//            VStack(alignment: .leading, spacing: 10){
+//                Text("Name")
+//                Text("Dosage")
+//                Text("Type")
+//                Text("Price")
+//            }
+////            TextField("Name", text: name)
+//        }
+        .navigationTitle("New Item")
         
     }
 }
