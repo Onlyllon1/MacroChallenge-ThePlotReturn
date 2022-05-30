@@ -20,21 +20,7 @@ struct NewItemView: View {
             }
         }
         
-//        HStack{
-//        VStack(alignment: .leading, spacing: 10){
-//            Text("Name")
-//            Text("Dosage")
-//            Text("Type")
-//            Text("Price")
-//        }
-//            VStack(alignment: .leading, spacing: 10){
-//                Text("Name")
-//                Text("Dosage")
-//                Text("Type")
-//                Text("Price")
-//            }
-////            TextField("Name", text: name)
-//        }
+   
         .navigationTitle("New Item")
         
     }
