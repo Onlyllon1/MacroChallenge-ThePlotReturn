@@ -9,7 +9,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+    init(){
+        Theme.navigationBarColors( titleColor: UIColor(CustomColor.darkblue))
+        }
 
     var body: some View {
             TabView(){

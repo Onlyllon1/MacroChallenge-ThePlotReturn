@@ -21,7 +21,8 @@ struct CabinetView: View {
         GridItem(.flexible(minimum: 90)),
         GridItem(.flexible(minimum: 90))
     ]
-    
+
+   
     
     
     var body: some View {
