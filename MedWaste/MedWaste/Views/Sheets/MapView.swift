@@ -7,10 +7,13 @@
 // This view is the Map used for showing all the pharmacys.
 
 import SwiftUI
+import MapKit
+
 
 struct MapView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+//        Map(coordinateRegion: <#T##Binding<MKCoordinateRegion>#>)
+        Text("Oke")
     }
 }
 
