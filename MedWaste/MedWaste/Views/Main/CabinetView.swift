@@ -26,11 +26,11 @@ struct CabinetView: View {
     
     var body: some View {
         NavigationView{
+            ScrollView {
             VStack{
                 Text("All Medicines").fontWeight(.bold)
                     .searchable(text: $searchQuery, prompt: "Search for medicines").frame(maxWidth: .infinity, alignment: .leading).padding(.leading, 20)
-                ScrollView {
-                    LazyVGrid(columns: columns, spacing: 20) {
+                LazyVGrid(columns: columns, spacing: 20) {
                         ForEach(data, id: \.self) { item in
                             MedCardView()
                                 .padding(5)
