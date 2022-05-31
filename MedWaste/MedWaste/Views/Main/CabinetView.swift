@@ -26,10 +26,17 @@ struct CabinetView: View {
     
     var body: some View {
         NavigationView{
+            ScrollView {
             VStack{
                 Text("All Medicines").fontWeight(.bold)
                     .searchable(text: $searchQuery, prompt: "Search for medicines").frame(maxWidth: .infinity, alignment: .leading).padding(.leading, 20)
-                ScrollView {
+                
+//                    List(recognizedContent.items, id: \.id) { textItem in
+//                        NavigationLink(destination: NewItemView(text: textItem.text)) {
+//                            Text(String(textItem.text.prefix(50)).appending("..."))
+//                        }
+//                    }
+                
                     LazyVGrid(columns: columns, spacing: 20) {
                         ForEach(data, id: \.self) { item in
                             MedCardView()
@@ -47,7 +54,8 @@ struct CabinetView: View {
                     showScanner = true }, label: { Image(systemName: "plus.circle.fill").foregroundColor(CustomColor.darkblue).scaleEffect(1.5)})
             }
             )
-        }.sheet(isPresented: $showMap, content: {MapView()})
+        }.navigationViewStyle(.stack)
+        .sheet(isPresented: $showMap, content: {MapView()})
             .sheet(isPresented: $showScanner, content: {
                 ScanView{ result in
                     switch result{
