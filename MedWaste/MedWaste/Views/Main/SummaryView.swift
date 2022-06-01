@@ -20,8 +20,9 @@ struct SummaryView: View {
                     ScrollView(.horizontal){
                         HStack(spacing: 5 ){
                             ForEach(data, id: \.self) { item in
-                                MiniMedCardView()
-                                    .padding(5)
+                                NavigationLink(destination: SingleMedView(),label: { MiniMedCardView()
+                                    .padding(5)})
+                                
                             }
                         }
                     }.frame(height: 200)
@@ -29,8 +30,9 @@ struct SummaryView: View {
                     ScrollView(.horizontal){
                         HStack(spacing: 5 ){
                             ForEach(data, id: \.self) { item in
-                                MiniMedCardView()
-                                    .padding(5)
+                                NavigationLink(destination: SingleMedView(),label: { MiniMedCardView()
+                                    .padding(5)})
+
                             }
                         }
                     }.frame(height: 200)
@@ -46,7 +48,7 @@ struct SummaryView: View {
                     
                 }.navigationTitle("Summary")
             }
-        }
+        } //:Navigation View
     }
 }
 

@@ -18,7 +18,7 @@ struct MiniMedCardView: View {
             Image("pills").resizable().scaledToFit()
            
           
-            Text("Ayrinal").font(.subheadline).fontWeight(.bold).textCase(.uppercase)
+            Text("Ayrinal").font(.subheadline).fontWeight(.bold).textCase(.uppercase).foregroundColor(CustomColor.graytext)
                  }.padding()
         
     }

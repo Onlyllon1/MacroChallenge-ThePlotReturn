@@ -23,7 +23,7 @@ struct RecognizeText {
                 let requestHandler = VNImageRequestHandler(cgImage: cgImage, options: [:])
                 
                 do {
-                    let textItem = MedData()
+                    let textItem = TextItem()
                     try requestHandler.perform([getTextRecognitionRequest(with: textItem)])
                     
                     DispatchQueue.main.async {
@@ -40,7 +40,7 @@ struct RecognizeText {
         }
     }
     
-    private func getTextRecognitionRequest(with textItem: MedData) -> VNRecognizeTextRequest{
+    private func getTextRecognitionRequest(with textItem: TextItem) -> VNRecognizeTextRequest{
         let request = VNRecognizeTextRequest{request, error in
             if let error = error {
                 print(error.localizedDescription)

@@ -18,16 +18,17 @@ struct MedCardView: View {
             .shadow(color: .gray, radius: 2, x: 0, y: 2)
         VStack(alignment: .center, spacing: 10){
             Image("pills").resizable().scaledToFit()
-            RoundedRectangle(cornerRadius: 20).fixedSize(horizontal: false, vertical: true)
+            RoundedRectangle(cornerRadius: 20).fixedSize(horizontal: false, vertical: false).frame( height: 5 , alignment: .center).foregroundColor(.pink)
+            Group{
             HStack{
                 Text("Ayrinal").font(.title3).fontWeight(.bold).textCase(.uppercase)
                 Spacer()
-                Text ("20mg")
+                Text ("20mg").foregroundColor(CustomColor.graytext)
             }
             HStack{
             Text("Antistamine")
             Spacer()
-            }
+            }}.foregroundColor(CustomColor.graytext)
            
         }.padding()
         

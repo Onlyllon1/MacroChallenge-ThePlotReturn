@@ -8,5 +8,5 @@
 import Foundation
 
 class RecognizedContent : ObservableObject {
-    @Published var items = [MedData]()
+    @Published var items = [TextItem]()
 }

@@ -12,6 +12,7 @@ import SwiftUI
 struct CustomColor {
     static let darkblue = Color("DarkBlue")
     static let medcardgray = Color("MedCardGray")
+    static let graytext = Color("GreyText")
 }
 
 
@@ -24,15 +25,15 @@ class Theme {
     ){
         
         let navigationAppearance = UINavigationBarAppearance()
-        navigationAppearance.configureWithOpaqueBackground()
+//        navigationAppearance.configureWithOpaqueBackground()
 //        navigationAppearance.backgroundColor = background ?? .clear
         
-        navigationAppearance.titleTextAttributes = [.foregroundColor: titleColor ?? .black]
-        navigationAppearance.largeTitleTextAttributes = [.foregroundColor: titleColor ?? CustomColor.darkblue]
+        navigationAppearance.titleTextAttributes = [.foregroundColor: titleColor ?? CustomColor.darkblue]
+//        navigationAppearance.largeTitleTextAttributes = [.foregroundColor: titleColor ?? CustomColor.darkblue]
        
-        UINavigationBar.appearance().standardAppearance = navigationAppearance
-        UINavigationBar.appearance().compactAppearance = navigationAppearance
-        UINavigationBar.appearance().scrollEdgeAppearance = navigationAppearance
+//        UINavigationBar.appearance().standardAppearance = navigationAppearance
+//        UINavigationBar.appearance().compactAppearance = navigationAppearance
+//        UINavigationBar.appearance().scrollEdgeAppearance = navigationAppearance
 
 //        UINavigationBar.appearance().tintColor = tintColor ?? titleColor ?? .black
     }

@@ -21,6 +21,9 @@
 		272E9AB328440D03006D8A2E /* RecognizeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E9AB228440D03006D8A2E /* RecognizeText.swift */; };
 		272E9AB528440FE8006D8A2E /* MedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E9AB428440FE8006D8A2E /* MedData.swift */; };
 		272E9AB7284413E0006D8A2E /* RecognizedContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E9AB6284413E0006D8A2E /* RecognizedContent.swift */; };
+		27FE120128462FFC00ADECA0 /* SingleMedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FE120028462FFC00ADECA0 /* SingleMedView.swift */; };
+		27FE12032846AFCE00ADECA0 /* hgd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FE12022846AFCE00ADECA0 /* hgd.swift */; };
+		27FE1205284747A400ADECA0 /* TextPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FE1204284747A400ADECA0 /* TextPreviewView.swift */; };
 		3C19F342283B9BBA00164F60 /* MedWasteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C19F341283B9BBA00164F60 /* MedWasteApp.swift */; };
 		3C19F344283B9BBA00164F60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C19F343283B9BBA00164F60 /* ContentView.swift */; };
 		3C19F346283B9BBB00164F60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C19F345283B9BBB00164F60 /* Assets.xcassets */; };
@@ -43,6 +46,9 @@
 		272E9AB228440D03006D8A2E /* RecognizeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizeText.swift; sourceTree = "<group>"; };
 		272E9AB428440FE8006D8A2E /* MedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedData.swift; sourceTree = "<group>"; };
 		272E9AB6284413E0006D8A2E /* RecognizedContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizedContent.swift; sourceTree = "<group>"; };
+		27FE120028462FFC00ADECA0 /* SingleMedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleMedView.swift; sourceTree = "<group>"; };
+		27FE12022846AFCE00ADECA0 /* hgd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hgd.swift; sourceTree = "<group>"; };
+		27FE1204284747A400ADECA0 /* TextPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPreviewView.swift; sourceTree = "<group>"; };
 		3C19F33E283B9BBA00164F60 /* MedWaste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedWaste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C19F341283B9BBA00164F60 /* MedWasteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedWasteApp.swift; sourceTree = "<group>"; };
 		3C19F343283B9BBA00164F60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,8 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				272A1898283BA117008E1CDF /* MedCardView.swift */,
+				27FE1204284747A400ADECA0 /* TextPreviewView.swift */,
 				272E9AAE2843D9E9006D8A2E /* FactsCardView.swift */,
 				272E9AB02843D9FD006D8A2E /* MiniMedCardView.swift */,
+				27FE12022846AFCE00ADECA0 /* hgd.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -117,6 +125,7 @@
 				272A188D283BA052008E1CDF /* AlertView.swift */,
 				272A188F283BA063008E1CDF /* ScanView.swift */,
 				272A1891283BA073008E1CDF /* NewItemView.swift */,
+				27FE120028462FFC00ADECA0 /* SingleMedView.swift */,
 				272A1893283BA082008E1CDF /* MapView.swift */,
 			);
 			path = Sheets;
@@ -244,7 +253,9 @@
 				272A1899283BA117008E1CDF /* MedCardView.swift in Sources */,
 				272A1890283BA063008E1CDF /* ScanView.swift in Sources */,
 				272E9AAF2843D9E9006D8A2E /* FactsCardView.swift in Sources */,
+				27FE1205284747A400ADECA0 /* TextPreviewView.swift in Sources */,
 				272E9AB12843D9FD006D8A2E /* MiniMedCardView.swift in Sources */,
+				27FE120128462FFC00ADECA0 /* SingleMedView.swift in Sources */,
 				272E9AB7284413E0006D8A2E /* RecognizedContent.swift in Sources */,
 				272A1888283B9FE9008E1CDF /* StatisticsView.swift in Sources */,
 				272A188E283BA052008E1CDF /* AlertView.swift in Sources */,
@@ -253,6 +264,7 @@
 				272A1894283BA082008E1CDF /* MapView.swift in Sources */,
 				3C2A319828460614001CE9DE /* MapViewModel.swift in Sources */,
 				272A188A283BA008008E1CDF /* CustomColors.swift in Sources */,
+				27FE12032846AFCE00ADECA0 /* hgd.swift in Sources */,
 				272E9AB328440D03006D8A2E /* RecognizeText.swift in Sources */,
 				3C19F342283B9BBA00164F60 /* MedWasteApp.swift in Sources */,
 			);
