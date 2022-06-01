@@ -9,18 +9,47 @@
 import SwiftUI
 
 struct NewItemView: View {
-    @ObservedObject var recognizedContent = RecognizedContent()
-//var name : String
+    
+    @State var nome: String = ""
+    @State var dosaggio: String = ""
+    @State var tipologia: String = ""
+    @State var prezzo: String = ""
+    @State var unità: String = ""
+    
     var body: some View {
-        ZStack(alignment: .bottom) {
-            List(recognizedContent.items, id: \.id) { textItem in
-                
-                    Text(String(textItem.text.prefix(50)).appending("..."))
-                
+        
+        VStack {
+            Form {
+                Section {
+                    HStack {
+                        Text("Nome")
+                        Spacer()
+                        TextField("Nome", text: $nome)
+                    }
+                    HStack {
+                        Text("Dosaggio")
+                        Spacer()
+                        TextField("Dosaggio", text: $dosaggio)
+                    }
+                    HStack {
+                        Text("Tipogia")
+                        Spacer()
+                        TextField("Tipologia", text: $tipologia)
+                    }
+                    HStack {
+                        Text("Prezzo")
+                        Spacer()
+                        TextField("Prezzo", text: $prezzo)
+                    }
+                    HStack {
+                        Text("Unità")
+                        Spacer()
+                        TextField("Unità", text: $unità)
+                    }
+                }.foregroundColor(Color.init(red: 202/255, green: 230/255, blue: 247/255, opacity: 0))
             }
         }
         
-   
         .navigationTitle("New Item")
         
     }

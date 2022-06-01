@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var store = MedicineStore()
+    
     init(){
         Theme.navigationBarColors( titleColor: UIColor(CustomColor.darkblue))
         }
@@ -20,6 +22,16 @@ struct ContentView: View {
 
                 CabinetView()
                     .tabItem {Label("Armadietto", systemImage: "heart.text.square.fill")}
+                    .onAppear {
+                                    MedicineStore.load { result in
+                                        switch result {
+                                        case .failure(let error):
+                                            fatalError(error.localizedDescription)
+                                        case .success(let medicines):
+                                            store.items = medicines
+                                        }
+                                    }
+                                }
 
                 StatisticsView()
                     .tabItem {Label("Statistiche", systemImage: "chart.pie.fill")}

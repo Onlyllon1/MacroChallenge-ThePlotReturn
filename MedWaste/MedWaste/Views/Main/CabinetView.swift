@@ -14,7 +14,7 @@ struct CabinetView: View {
     @State private var showMap = false
     @State private var showData = false
     @State private var isRecognizing = false
-    @ObservedObject var recognizedContent = RecognizedContent()
+//    @ObservedObject var recognizedContent = RecognizedContent()
     
     let data = (1...10).map { "Item \($0)" }
     let columns = [
@@ -48,25 +48,27 @@ struct CabinetView: View {
                     showScanner = true }, label: { Image(systemName: "plus.circle.fill").foregroundColor(CustomColor.darkblue).scaleEffect(1.5)})
             }
             )
-        }.sheet(isPresented: $showMap, content: {MapView()})
-            .sheet(isPresented: $showScanner, content: {
-                ScanView{ result in
-                    switch result{
-                    case .success(let scannedImages):
-                        isRecognizing = true
-                        RecognizeText(scannedImages: scannedImages, recognizedContent: recognizedContent){
-                            isRecognizing = false
-                            showData = true
-                        }.recognizeText()
-                        
-                    case .failure(let error):
-                        print(error.localizedDescription)
-                    }
-                    showScanner = false
-                } didCancelScanning: {showScanner = false}
-                
-            })
-            .sheet(isPresented: $showData, content: {NewItemView()})
+        }
+//        
+//        .sheet(isPresented: $showMap, content: {MapView()})
+//            .sheet(isPresented: $showScanner, content: {
+//                ScanView{ result in
+//                    switch result{
+//                    case .success(let scannedImages):
+//                        isRecognizing = true
+//                        RecognizeText(scannedImages: scannedImages, recognizedContent: recognizedContent){
+//                            isRecognizing = false
+//                            showData = true
+//                        }.recognizeText()
+//                        
+//                    case .failure(let error):
+//                        print(error.localizedDescription)
+//                    }
+//                    showScanner = false
+//                } didCancelScanning: {showScanner = false}
+//                
+//            })
+//            .sheet(isPresented: $showData, content: {NewItemView()})
     }
 }
 
