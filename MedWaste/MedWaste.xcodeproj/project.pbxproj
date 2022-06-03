@@ -22,6 +22,8 @@
 		272E9AB528440FE8006D8A2E /* MedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E9AB428440FE8006D8A2E /* MedData.swift */; };
 		272E9AB7284413E0006D8A2E /* RecognizedContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E9AB6284413E0006D8A2E /* RecognizedContent.swift */; };
 		272E9AB92844C658006D8A2E /* TextListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E9AB82844C658006D8A2E /* TextListView.swift */; };
+		27FE120728475F2000ADECA0 /* TextPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FE120628475F2000ADECA0 /* TextPreviewView.swift */; };
+		27FE120B2847B01000ADECA0 /* SeperateText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FE120A2847B01000ADECA0 /* SeperateText.swift */; };
 		3C19F342283B9BBA00164F60 /* MedWasteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C19F341283B9BBA00164F60 /* MedWasteApp.swift */; };
 		3C19F344283B9BBA00164F60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C19F343283B9BBA00164F60 /* ContentView.swift */; };
 		3C19F346283B9BBB00164F60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C19F345283B9BBB00164F60 /* Assets.xcassets */; };
@@ -44,6 +46,8 @@
 		272E9AB428440FE8006D8A2E /* MedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedData.swift; sourceTree = "<group>"; };
 		272E9AB6284413E0006D8A2E /* RecognizedContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizedContent.swift; sourceTree = "<group>"; };
 		272E9AB82844C658006D8A2E /* TextListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextListView.swift; sourceTree = "<group>"; };
+		27FE120628475F2000ADECA0 /* TextPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPreviewView.swift; sourceTree = "<group>"; };
+		27FE120A2847B01000ADECA0 /* SeperateText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeperateText.swift; sourceTree = "<group>"; };
 		3C19F33E283B9BBA00164F60 /* MedWaste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedWaste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C19F341283B9BBA00164F60 /* MedWasteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedWasteApp.swift; sourceTree = "<group>"; };
 		3C19F343283B9BBA00164F60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 				272A1881283B9FBC008E1CDF /* CabinetView.swift */,
 				3C19F343283B9BBA00164F60 /* ContentView.swift */,
 				272A1885283B9FDA008E1CDF /* SummaryView.swift */,
+				27FE120A2847B01000ADECA0 /* SeperateText.swift */,
 				272A1887283B9FE9008E1CDF /* StatisticsView.swift */,
 			);
 			path = Main;
@@ -99,6 +104,7 @@
 				272E9AAE2843D9E9006D8A2E /* FactsCardView.swift */,
 				272E9AB82844C658006D8A2E /* TextListView.swift */,
 				272E9AB02843D9FD006D8A2E /* MiniMedCardView.swift */,
+				27FE120628475F2000ADECA0 /* TextPreviewView.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -248,9 +254,11 @@
 				272E9AB7284413E0006D8A2E /* RecognizedContent.swift in Sources */,
 				272A1888283B9FE9008E1CDF /* StatisticsView.swift in Sources */,
 				272A188E283BA052008E1CDF /* AlertView.swift in Sources */,
+				27FE120728475F2000ADECA0 /* TextPreviewView.swift in Sources */,
 				272A1886283B9FDA008E1CDF /* SummaryView.swift in Sources */,
 				272E9AB92844C658006D8A2E /* TextListView.swift in Sources */,
 				272A1882283B9FBC008E1CDF /* CabinetView.swift in Sources */,
+				27FE120B2847B01000ADECA0 /* SeperateText.swift in Sources */,
 				272A1894283BA082008E1CDF /* MapView.swift in Sources */,
 				272A188A283BA008008E1CDF /* CustomColors.swift in Sources */,
 				272E9AB328440D03006D8A2E /* RecognizeText.swift in Sources */,
@@ -380,6 +388,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MedWaste/Preview Content\"";
@@ -390,6 +399,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
@@ -411,6 +421,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MedWaste/Preview Content\"";
@@ -421,6 +432,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;

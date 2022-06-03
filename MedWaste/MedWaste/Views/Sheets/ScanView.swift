@@ -1,59 +1,59 @@
 //
-//  ScanView.swift
-//  MedWaste
+//  ScannerView.swift
+//  ScanAndRecognizeText
 //
-//  Created by Irene Fernando on 23/05/22.
+//  Created by Gabriel Theodoropoulos.
 //
-// This view is used for scanning the box of med: Both the front and the side.
 
 import SwiftUI
 import VisionKit
 
-struct ScanView: UIViewControllerRepresentable {
-    var didFinishScanning: ((_ result: Result<[UIImage], Error>)-> Void)
+struct ScannerView: UIViewControllerRepresentable {
+    var didFinishScanning: ((_ result: Result<[UIImage], Error>) -> Void)
     var didCancelScanning: () -> Void
-   
+    
     func makeUIViewController(context: Context) -> VNDocumentCameraViewController {
-        let scanViewController = VNDocumentCameraViewController()
-        scanViewController.delegate = context.coordinator
-        return scanViewController
+        let scannerViewController = VNDocumentCameraViewController()
+        scannerViewController.delegate = context.coordinator
+        return scannerViewController
     }
-     
-    func updateUIViewController(_ uiViewController: VNDocumentCameraViewController, context: Context) {
-        
-    }
+    
+    func updateUIViewController(_ uiViewController: VNDocumentCameraViewController, context: Context) { }
+    
     
     func makeCoordinator() -> Coordinator {
         Coordinator(with: self)
     }
     
+    
     class Coordinator: NSObject, VNDocumentCameraViewControllerDelegate {
-        let scanView : ScanView
-        init(with scanView: ScanView) {
-            self.scanView = scanView
+        let scannerView: ScannerView
+        
+        init(with scannerView: ScannerView) {
+            self.scannerView = scannerView
         }
+        
+        
+        // MARK: - VNDocumentCameraViewControllerDelegate
+        
         func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
-            var scannedBoxes = [UIImage]()
+            var scannedPages = [UIImage]()
+            
             for i in 0..<scan.pageCount {
-                scannedBoxes.append(scan.imageOfPage(at: 1))
+                scannedPages.append(scan.imageOfPage(at: i))
             }
-            scanView.didFinishScanning(.success(scannedBoxes))
+            
+            scannerView.didFinishScanning(.success(scannedPages))
         }
+        
         
         func documentCameraViewControllerDidCancel(_ controller: VNDocumentCameraViewController) {
-            scanView.didCancelScanning()
+            scannerView.didCancelScanning()
         }
         
-        func documentCameraViewController(_ controller: VNDocumentCameraViewController,didFailWithError error: Error){
-            scanView.didFinishScanning(.failure(error))
+        func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFailWithError error: Error) {
+            scannerView.didFinishScanning(.failure(error))
         }
     }
     
-    
 }
-
-//struct ScanView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ScanView()
-//    }
-//}

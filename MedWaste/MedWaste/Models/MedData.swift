@@ -8,15 +8,18 @@
 import Foundation
 
 
-class MedData : Identifiable {
+class TextItem: Identifiable {
     var id: String
-    var text : String = ""
+    var text: String = ""
     
-//    init(){}
     init() {
         id = UUID().uuidString
     }
 }
 
+
+class RecognizedContent: ObservableObject {
+    @Published var items = [TextItem]()
+}
 
 

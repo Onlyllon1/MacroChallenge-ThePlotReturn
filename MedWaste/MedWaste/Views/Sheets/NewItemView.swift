@@ -9,15 +9,20 @@
 import SwiftUI
 
 struct NewItemView: View {
+//     var recognizedContent = RecognizedContent()
     @ObservedObject var recognizedContent = RecognizedContent()
 //var name : String
     var body: some View {
-        ZStack(alignment: .bottom) {
+        VStack(alignment: .leading) {
+            
             List(recognizedContent.items, id: \.id) { textItem in
-                
+                NavigationLink(destination: TextPreviewView(text: textItem.text)) {
                     Text(String(textItem.text.prefix(50)).appending("..."))
-                
+                }
             }
+            
+            
+            Text("New Item....")
         }
         
    
