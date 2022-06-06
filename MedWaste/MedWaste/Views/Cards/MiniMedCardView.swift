@@ -12,14 +12,16 @@ struct MiniMedCardView: View {
         ZStack{
         RoundedRectangle(cornerRadius: 20, style: .continuous)
                 .foregroundColor(CustomColor.medcardgray)
-            .fixedSize(horizontal: false, vertical: false)
+                .frame(width: 120, height: 150, alignment: .center)
+
             .shadow(color: .gray, radius: 2, x: 0, y: 2)
-        VStack(alignment: .center, spacing: 10){
-            Image("pills").resizable().scaledToFit()
-           
-          
-            Text("Ayrinal").font(.subheadline).fontWeight(.bold).textCase(.uppercase)
-                 }.padding()
+            .overlay( VStack(alignment: .center, spacing: 10){
+                Image("pills").resizable().scaledToFit()
+               
+              
+                Text("Ayrinal").font(.subheadline).fontWeight(.bold).textCase(.uppercase)
+                     }.padding().foregroundColor(CustomColor.graytext))
+       
         
     }
 
