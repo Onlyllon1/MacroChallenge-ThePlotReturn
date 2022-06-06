@@ -171,15 +171,20 @@ struct NewItemView: View {
                     HStack {
                     
                         Spacer()
-                    Button("Conferma") {
-                        MedicineViewModel().addNewMedicine(name: nome, dosage: dosaggio, type: tipologia, price: prezzo, units: Int(unità) ?? 0, category: categoria)
                         
-                        // add all the boxes of that medicine
-                        for i in 1...numerobox {
-                            BoxViewModel().addNewBox(medicine: nome, expirationDate: expirationDate[i-1], state: .usable)
-                        }
+//                REQUIRED THE MEDICINEVIEWMODEL()
+//                        ******************
+//                    Button("Conferma") {
+//                        MedicineViewModel().addNewMedicine(name: nome, dosage: dosaggio, type: tipologia, price: prezzo, units: Int(unità) ?? 0, category: categoria)
+//
+//                        // add all the boxes of that medicine
+//                        for i in 1...numerobox {
+//                            BoxViewModel().addNewBox(medicine: nome, expirationDate: expirationDate[i-1], state: .usable)
+//                        }
+//
+//                    }
+//                        ******************
                         
-                    }
                     .foregroundColor(.white)
                     .padding()
                     .background(Color.accentColor)
