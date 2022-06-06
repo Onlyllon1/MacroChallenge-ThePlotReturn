@@ -29,18 +29,19 @@ struct CabinetView: View {
         NavigationView{
             ScrollView {
             VStack{
-                Text("All Medicines").fontWeight(.bold)
+                Text("Tutti i medicinali").fontWeight(.bold)
                     .searchable(text: $searchQuery, prompt: "Search for medicines").frame(maxWidth: .infinity, alignment: .leading).padding(.leading, 20)
                 LazyVGrid(columns: columns, spacing: 20) {
                         ForEach(data, id: \.self) { item in
-                            MedCardView()
-                                .padding(5)
+                            NavigationLink(destination: SingleMedView(), label: {MedCardView()
+                                .padding(5)})
+                            
                         }
                     }
                 }
             }
             
-            .navigationTitle("Cabinet")
+            .navigationTitle("Armadietto")
             .navigationBarItems(trailing:
                                     HStack(spacing: 20){
                 Button(action: { showMap = true }, label: { Image(systemName: "map.circle.fill").scaleEffect(1.5)})
