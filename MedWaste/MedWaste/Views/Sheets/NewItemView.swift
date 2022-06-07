@@ -22,7 +22,7 @@ struct NewItemView: View {
     
     var body: some View {
         
-        NavigationView {
+      
             
             VStack(alignment: .leading, spacing: 0) {
                 
@@ -75,7 +75,8 @@ struct NewItemView: View {
                         
                     } // :Information section
                     .padding()
-                    .listRowBackground(Color.init(red: 202/255, green: 230/255, blue: 247/255))
+                    .listRowBackground(CustomColor.blueform)
+                   
                     
                     // adding the number of boxes
                     
@@ -102,7 +103,9 @@ struct NewItemView: View {
 //                                    .multilineTextAlignment(.trailing)
                             }
                             
-                        }.listRowBackground(Color.init(red: 202/255, green: 230/255, blue: 247/255)).padding()
+                        }.listRowBackground(CustomColor.blueform)
+//                        .listRowBackground(Color.init(red: 202/255, green: 230/255, blue: 247/255))
+                            .padding()
                         // : section for stepper
                         
                     }
@@ -143,7 +146,7 @@ struct NewItemView: View {
                             
                         }
                     }
-                    .listRowBackground(Color.init(red: 247/255, green: 213/255, blue: 223/255)).padding()
+                    .listRowBackground(CustomColor.redform).padding()
                     // : section for stepper
                     
                     
@@ -205,7 +208,7 @@ struct NewItemView: View {
             
             .navigationTitle("Nuovo medicinale")
             
-        }
+        
     }
 }
 

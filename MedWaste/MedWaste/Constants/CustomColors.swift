@@ -15,6 +15,8 @@ struct CustomColor {
     static let graytext = Color("GreyText")
     static let expiredred = Color("ExpiredRed")
     static let donnatedgreen = Color("DonatedGreen")
+    static let blueform = Color("BlueForm")
+    static let redform = Color("RedForm")
 }
 
 

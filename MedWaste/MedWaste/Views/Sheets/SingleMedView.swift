@@ -59,7 +59,7 @@ struct SingleMedView: View {
                         Button{alertexpire.toggle()} label: {
                             Image(systemName: "trash.fill")
                         }
-                        .tint(.red)
+                        .tint(CustomColor.expiredred)
 
                         
                         Button{alertdonate.toggle()} label: {
@@ -68,11 +68,12 @@ struct SingleMedView: View {
                              
                         
                         }
-                    .tint(.green)
+                        .tint(CustomColor.donnatedgreen)
                         
                     }
                 }
             }
+            .listRowBackground(CustomColor.redform)
             .listStyle(.inset)
             .frame(height: 200)
 //

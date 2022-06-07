@@ -16,7 +16,10 @@ struct SummaryView: View {
         NavigationView{
             ScrollView{
                 VStack{
-                    Text("In evidenza").font(.title3).fontWeight(.bold).frame(maxWidth: .infinity, alignment: .leading).padding(.leading, 20)
+                    Spacer()
+                    Text("In evidenza").font(.title3).fontWeight(.bold).frame(maxWidth: .infinity, alignment: .leading)
+                        .padding()
+//                        .padding(.leading, 20)
                     ScrollView(.horizontal){
                         HStack(spacing: 5 ){
                             ForEach(data, id: \.self) { item in
@@ -26,9 +29,10 @@ struct SummaryView: View {
                             }
                         }
                     }.fixedSize(horizontal: false, vertical: false)
+                    Spacer()
                     Text("In scadenza").font(.title3).fontWeight(.bold).frame(maxWidth: .infinity, alignment: .leading).padding(.leading, 20)
                     
-                    DonateIcon()
+//                    DonateIcon()
                     
                     ScrollView(.horizontal){
                         HStack(spacing: 5 ){
@@ -39,6 +43,7 @@ struct SummaryView: View {
                             }
                         }
                     }.fixedSize(horizontal: false, vertical: false)
+                    Spacer()
                     Text("Curiosità").font(.title3).fontWeight(.bold).frame(maxWidth: .infinity, alignment: .leading).padding(.leading, 20)
 //                    ScrollView(.horizontal){
 //                        HStack( ){
