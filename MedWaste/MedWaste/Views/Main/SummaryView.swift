@@ -40,14 +40,14 @@ struct SummaryView: View {
                         }
                     }.fixedSize(horizontal: false, vertical: false)
                     Text("Curiosità").font(.title3).fontWeight(.bold).frame(maxWidth: .infinity, alignment: .leading).padding(.leading, 20)
-                    ScrollView(.horizontal){
-                        HStack( ){
-                            ForEach(data, id: \.self) { item in
+//                    ScrollView(.horizontal){
+//                        HStack( ){
+//                            ForEach(data, id: \.self) { item in
                                 FactsCardView().frame(width: 350)
                                 
-                            }
-                        }
-                    }
+//                            }
+//                        }
+//                    }
                     
                 }.navigationTitle("Riepilogo")
             }

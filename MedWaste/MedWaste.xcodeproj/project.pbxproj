@@ -31,6 +31,8 @@
 		3C19F346283B9BBB00164F60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C19F345283B9BBB00164F60 /* Assets.xcassets */; };
 		3C19F349283B9BBB00164F60 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C19F348283B9BBB00164F60 /* Preview Assets.xcassets */; };
 		3C2A319828460614001CE9DE /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2A319728460614001CE9DE /* MapViewModel.swift */; };
+		5AD0AB4E284F350C0068816C /* CircleStatistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD0AB4D284F350C0068816C /* CircleStatistic.swift */; };
+		5AD0AB50284F3DAE0068816C /* StatCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD0AB4F284F3DAE0068816C /* StatCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,8 @@
 		3C19F345283B9BBB00164F60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C19F348283B9BBB00164F60 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3C2A319728460614001CE9DE /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		5AD0AB4D284F350C0068816C /* CircleStatistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleStatistic.swift; sourceTree = "<group>"; };
+		5AD0AB4F284F3DAE0068816C /* StatCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 				273AB3F8284E0F5B00995583 /* CircleCheckBox.swift */,
 				272E9AAE2843D9E9006D8A2E /* FactsCardView.swift */,
 				272E9AB02843D9FD006D8A2E /* MiniMedCardView.swift */,
+				5AD0AB4D284F350C0068816C /* CircleStatistic.swift */,
+				5AD0AB4F284F3DAE0068816C /* StatCardView.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -267,12 +273,14 @@
 				273AB3F9284E0F5B00995583 /* CheckBoxView.swift in Sources */,
 				273AB3FC284E107F00995583 /* StepperView.swift in Sources */,
 				272A188E283BA052008E1CDF /* AlertView.swift in Sources */,
+				5AD0AB50284F3DAE0068816C /* StatCardView.swift in Sources */,
 				273AB3FA284E0F5B00995583 /* CircleCheckBox.swift in Sources */,
 				272A1886283B9FDA008E1CDF /* SummaryView.swift in Sources */,
 				272A1882283B9FBC008E1CDF /* CabinetView.swift in Sources */,
 				272A1894283BA082008E1CDF /* MapView.swift in Sources */,
 				3C2A319828460614001CE9DE /* MapViewModel.swift in Sources */,
 				272A188A283BA008008E1CDF /* CustomColors.swift in Sources */,
+				5AD0AB4E284F350C0068816C /* CircleStatistic.swift in Sources */,
 				272E9AB328440D03006D8A2E /* RecognizeText.swift in Sources */,
 				3C19F342283B9BBA00164F60 /* MedWasteApp.swift in Sources */,
 			);
