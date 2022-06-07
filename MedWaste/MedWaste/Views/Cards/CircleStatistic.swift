@@ -8,46 +8,42 @@
 import SwiftUI
 
 struct CircleStatistic: View {
+    
     @State var animation : CGFloat = 300
     var body: some View {
        
         VStack{
-            ZStack {
+            ZStack(alignment: .center) {
            Circle()
-//                    all medicines
                 .foregroundColor(CustomColor.darkblue)
                 .scaleEffect(1.0, anchor: .leading)
-//                .offset(x: animation, y: 0)
+
               
             Circle()
-//                donable
                     .foregroundColor(CustomColor.donnatedgreen)
                 .scaleEffect(0.9, anchor: .leading)
-//                .offset(x: animation, y: 0)
+
    
             Circle()
-//                about to expire
                 .foregroundColor(.orange)
                 .scaleEffect(0.7, anchor: .leading)
-//                .offset(x: animation, y: 0)
-//
+
             Circle()
-//                expired
+
                 .foregroundColor(CustomColor.expiredred)
                 .scaleEffect(0.4, anchor: .leading)
-//                .offset(x: animation, y: 0)
+
                 
         }
         .padding()
         .offset(x: 17, y: 0)
         .frame(width: animation, height: 300, alignment: .center)
-        .animation(
-                    .easeOut(duration: 2)
+        .animation(.easeIn(duration: 1), value: animation)
 
-        )
         .onAppear {
             self.animation = 400
         }
+
 
         
             VStack{

@@ -20,7 +20,7 @@ struct SearchView: View {
                         Text("Scaduti")
                         
                     }.padding()
-                        .background(Color.red)
+                        .background(CustomColor.expiredred)
                         .foregroundColor(.white)
                         .cornerRadius(40)
                 }
@@ -32,7 +32,7 @@ struct SearchView: View {
                         Text("Donabili")
                         
                     }.padding()
-                        .background(Color.green)
+                        .background(CustomColor.donnatedgreen)
                         .foregroundColor(.white)
                         .cornerRadius(40)
                 }
