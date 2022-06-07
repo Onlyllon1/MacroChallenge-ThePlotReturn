@@ -14,7 +14,7 @@ struct StatisticsView: View {
    
     var body: some View {
         NavigationView{
-            
+//
 //                card per le informzoni
             VStack{
             CircleStatistic()
