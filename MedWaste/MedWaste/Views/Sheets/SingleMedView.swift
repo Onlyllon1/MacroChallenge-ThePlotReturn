@@ -27,7 +27,7 @@ struct SingleMedView: View {
         
         ScrollView {
             
-            VStack(){
+            VStack {
                 
                 Image("pills").resizable()
                     .frame(width: 200, height: 200, alignment: .center).padding()
@@ -50,8 +50,10 @@ struct SingleMedView: View {
                     HStack{
                         Text("Scatole").font(.title2).fontWeight(.bold)
                         Spacer()
-                        NavigationLink(destination: NewItemView(medicineViewModel: medicineViewModel, boxViewModel: boxViewModel), label: {Image(systemName: "plus.circle.fill").scaleEffect(1.5).foregroundColor(CustomColor.darkblue)})
-                        
+                        Button(action: {
+                            boxViewModel.addNewBox(medicine: nome, expirationDate: Date.now, state: .usable)
+                        })
+                        { Image(systemName: "plus.circle.fill").scaleEffect(1.5).foregroundColor(CustomColor.darkblue)}
                     }
                 }
                 //            .foregroundColor(CustomColor.graytext)
@@ -60,12 +62,14 @@ struct SingleMedView: View {
                 List {
                     ForEach (boxViewModel.filterBoxesForMedicine(medicine: nome)) { box in
                         
-                        
-                        HStack{
+                        LazyHStack{
                             Text("Box")
+                                .fontWeight(.semibold)
                             Spacer()
                             Text("\(box.expirationDate)")
-                        }.padding()
+                                .foregroundColor(.secondary)
+                                .multilineTextAlignment(.leading)
+                        }
                             .swipeActions {
                                 
                                 Button{alertexpire.toggle()} label: {
@@ -84,17 +88,21 @@ struct SingleMedView: View {
                                 .tint(.green)
                                 
                             }
-                    }
+                    }.listRowBackground(Color.init(red: 247/255, green: 213/255, blue: 223/255)).padding()
                 }
                 .listStyle(.inset)
                 .frame(height: 200)
-                //
-                
-                
-                
-            }.padding(20)
+                .padding()
             
-        }
+                
+                
+            }
+            .padding(20)
+            
+        }            .onAppear(perform: {
+            UITableView.appearance().backgroundColor = UIColor.clear
+        UITableViewCell.appearance().backgroundColor = UIColor.clear
+                      })
         
         //        .sheet(isPresented: $alertdonate, content: {AlertView(statethrow: false)})
         //            .sheet(isPresented: $alertexpire, content: {AlertView(statethrow: true)})
