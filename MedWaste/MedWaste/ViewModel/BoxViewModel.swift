@@ -33,8 +33,9 @@ class BoxViewModel :ObservableObject {
     
     
     func addNewBox(medicine: String, expirationDate: Date, state :MedState) {
-        
+
         boxes.append(MedBox(medicine: medicine, expirationDate: expirationDate, state: state))
-        
+//        medicineViewModel.addBox(MedBox(medicine: medicine, expirationDate: expirationDate, state: state)
+
     }
 }

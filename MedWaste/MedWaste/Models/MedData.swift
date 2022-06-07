@@ -19,9 +19,8 @@ struct MedData: Identifiable, Codable {
     var price :String
     var units :Int
     var category :String
-    var boxes :[MedBox]
     
-    init(id :UUID = UUID(), name :String, dosage :String, type :String, price :String, units :Int, category :String, boxes: [MedBox]) {
+    init(id :UUID = UUID(), name :String, dosage :String, type :String, price :String, units :Int, category :String) {
         self.id = id
         self.name = name
         self.dosage = dosage
@@ -29,7 +28,6 @@ struct MedData: Identifiable, Codable {
         self.price = price
         self.units = units
         self.category = category
-        self.boxes = boxes
     }
 
 }
@@ -76,8 +74,8 @@ extension MedData {
     
     static let sampleData: [MedData] =
     [
-        MedData(name: "Tachipirina", dosage: "100 mg", type: "compresse", price: "9,00 €",  units: 30, category: "antivirale", boxes: [MedBox(medicine: "Tachipirina", expirationDate: Date.now, state: .usable), MedBox(medicine: "Tachipirina", expirationDate: Date.now, state: .usable)]),
-        MedData(name: "Ayrinal", dosage: "100 mg", type: "compresse", price: "10,90 €",  units: 30, category: "antivirale", boxes: [MedBox(medicine: "Ayrinal", expirationDate: Date.now, state: .usable)])
+        MedData(name: "Tachipirina", dosage: "100 mg", type: "compresse", price: "9,00 €",  units: 30, category: "antivirale"),
+        MedData(name: "Ayrinal", dosage: "100 mg", type: "compresse", price: "10,90 €",  units: 30, category: "antivirale")
 
     ]
 }

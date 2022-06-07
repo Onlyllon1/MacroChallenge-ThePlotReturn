@@ -55,51 +55,53 @@ struct SingleMedView: View {
                         })
                         { Image(systemName: "plus.circle.fill").scaleEffect(1.5).foregroundColor(CustomColor.darkblue)}
                     }
+                    
+  
                 }
+                .padding(20)
                 //            .foregroundColor(CustomColor.graytext)
                 
                 
                 List {
-                    ForEach (boxViewModel.filterBoxesForMedicine(medicine: nome)) { box in
+                    ForEach(0..<boxViewModel.boxes.count, id: \.self) { index in
                         
-                        LazyHStack{
-                            Text("Box")
+                        HStack{
+                            Text("Box \(index+1)")
                                 .fontWeight(.semibold)
                             Spacer()
-                            Text("\(box.expirationDate)")
+                            Text("\(boxViewModel.boxes[index].expirationDate)")
                                 .foregroundColor(.secondary)
                                 .multilineTextAlignment(.leading)
                         }
-                            .swipeActions {
+                        .swipeActions {
+                            
+                            Button{alertexpire.toggle()} label: {
+                                Image(systemName: "trash.fill")
+                            }
+                            .tint(.red)
+                            
+                            
+                            Button{alertdonate.toggle()} label: {
                                 
-                                Button{alertexpire.toggle()} label: {
-                                    Image(systemName: "trash.fill")
-                                }
-                                .tint(.red)
+                                //                            DonateIcon()
+                                Image(systemName: "hand.raised.fill")
                                 
-                                
-                                Button{alertdonate.toggle()} label: {
-                                    
-                                    //                            DonateIcon()
-                                    Image(systemName: "hand.raised.fill")
-                                    
-                                    
-                                }
-                                .tint(.green)
                                 
                             }
+                            .tint(.green)
+                            
+                        }
                     }.listRowBackground(Color.init(red: 247/255, green: 213/255, blue: 223/255)).padding()
                 }
                 .listStyle(.inset)
                 .frame(height: 200)
-                .padding()
-            
-                
-                
+                .padding(20)
+             
             }
             .padding(20)
             
-        }            .onAppear(perform: {
+        }
+        .onAppear(perform: {
             UITableView.appearance().backgroundColor = UIColor.clear
         UITableViewCell.appearance().backgroundColor = UIColor.clear
                       })

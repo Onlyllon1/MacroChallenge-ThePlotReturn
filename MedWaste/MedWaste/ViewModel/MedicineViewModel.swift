@@ -10,14 +10,13 @@ import Foundation
 class MedicineViewModel :ObservableObject {
     
     @Published var medicines :[MedData] = [
-        MedData(name: "Tachipirina", dosage: "100 mg", type: "compresse", price: "9,00 €",  units: 30, category: "antivirale", boxes: [MedBox(medicine: "Tachipirina", expirationDate: Date.now, state: .usable), MedBox(medicine: "Tachipirina", expirationDate: Date.now, state: .usable)]),
-        MedData(name: "Ayrinal", dosage: "100 mg", type: "compresse", price: "10,90 €",  units: 30, category: "antistaminico", boxes: [MedBox(medicine: "Ayrinal", expirationDate: Date.now, state: .usable)])
+        MedData(name: "Tachipirina", dosage: "100 mg", type: "compresse", price: "9,00 €",  units: 30, category: "antivirale"),
+        MedData(name: "Ayrinal", dosage: "100 mg", type: "compresse", price: "10,90 €",  units: 30, category: "antistaminico")
     
     ]
     
     func addNewMedicine(name :String, dosage: String, type :String, price :String, units :Int, category :String) {
-        
-        medicines.append(MedData(name: name, dosage: dosage, type: type, price: price, units: units, category: category, boxes: BoxViewModel().filterBoxesForMedicine(medicine: name)))
+        medicines.append(MedData(name: name, dosage: dosage, type: type, price: price, units: units, category: category))
     }
     
     
