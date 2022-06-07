@@ -16,6 +16,18 @@ struct CustomColor {
 }
 
 
+extension Color{
+    static let systemBlue = Color(UIColor.systemBlue)
+       static let systemPurple = Color(UIColor.systemPurple)
+       static let systemGreen = Color(UIColor.systemGreen)
+       static let systemYellow = Color(UIColor.systemYellow)
+       static let systemOrange = Color(UIColor.systemOrange)
+       static let systemPink = Color(UIColor.systemPink)
+       static let systemRed = Color(UIColor.systemRed)
+       static let systemTeal = Color(UIColor.systemTeal)
+       static let systemIndigo = Color(UIColor.systemIndigo)
+}
+
 
 class Theme {
     static func navigationBarColors( titleColor : UIColor? = nil ){

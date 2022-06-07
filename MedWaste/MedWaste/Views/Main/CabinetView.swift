@@ -22,7 +22,13 @@ struct CabinetView: View {
         GridItem(.flexible(minimum: 90))
     ]
 
-   
+//    var searchResults: [String] {
+//        if searchQuery.isEmpty {
+//            return names
+//        } else {
+//            return names.filter { $0.contains(searchQuery) }
+//        }
+//    }
     
     
     var body: some View {
@@ -30,17 +36,22 @@ struct CabinetView: View {
             ScrollView {
             VStack{
                 Text("Tutti i medicinali").fontWeight(.bold)
-                    .searchable(text: $searchQuery, prompt: "Search for medicines").frame(maxWidth: .infinity, alignment: .leading).padding(.leading, 20)
+                    .frame(maxWidth: .infinity, alignment: .leading).padding(.leading, 20)
                 LazyVGrid(columns: columns, spacing: 20) {
                         ForEach(data, id: \.self) { item in
                             NavigationLink(destination: SingleMedView(), label: {MedCardView()
                                 .padding(5)})
                             
                         }
+                    }.searchable(text: $searchQuery, prompt: "Search for medicines")
+                    {
+                        if searchQuery.isEmpty{
+                            SearchView()
+                        }
+                    
                     }
                 }
             }
-            
             .navigationTitle("Armadietto")
             .navigationBarItems(trailing:
                                     HStack(spacing: 20){
