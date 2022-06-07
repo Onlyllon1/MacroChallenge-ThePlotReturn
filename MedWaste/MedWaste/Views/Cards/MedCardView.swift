@@ -18,7 +18,7 @@ struct MedCardView: View {
             .shadow(color: .gray, radius: 2, x: 0, y: 2)
         VStack(alignment: .center, spacing: 10){
             Image("pills").resizable().scaledToFit().padding()
-            RoundedRectangle(cornerRadius: 20).fixedSize(horizontal: false, vertical: false).frame( height: 5 , alignment: .center).foregroundColor(.pink)
+            RoundedRectangle(cornerRadius: 20).fixedSize(horizontal: false, vertical: false).frame( height: 5 , alignment: .center).foregroundColor(Color.systemOrange)
             HStack{
                 Text("Ayrinal").font(.title3).fontWeight(.bold).textCase(.uppercase)
                 Spacer()
