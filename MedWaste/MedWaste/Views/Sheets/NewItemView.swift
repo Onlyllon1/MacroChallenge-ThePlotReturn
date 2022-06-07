@@ -20,6 +20,10 @@ struct NewItemView: View {
     @State var categoria = ""
     @State var expirationDate :[Date] = [Date.now] // an array of expiration date for different boxes
     
+    var medicineViewModel :MedicineViewModel
+    var boxViewModel :BoxViewModel
+    
+    
     var body: some View {
         
         NavigationView {
@@ -126,8 +130,7 @@ struct NewItemView: View {
                             
                             HStack {
                                 DatePicker("Box  \(index)", selection:
-                                            
-                                            
+                                              
                                             // if the user wants all the boxes have the same expiration date,it automatically update the same date, else each box has a different expiration date
                                            isTheSameDate ? $expirationDate[0] : $expirationDate[index-1]
                                             
@@ -147,22 +150,22 @@ struct NewItemView: View {
                     // : section for stepper
                     
                     
-                    Text("Categoria")
-                        .font(.title2)
-                        .fontWeight(.semibold)
-                        .multilineTextAlignment(.leading)
-                    
-                    
-                    VStack(spacing: 20) {
-                        Picker(selection: $categoria, label: Text("Categoria Medicinale")) {
-                            Text("Antistaminici").tag(1)
-                            Text("Antivirali").tag(2)
-                            Text("Anti-Infiammatori").tag(3)
-                            Text("Antibiotici").tag(4)
-                            Text("Antimicotici").tag(5)
-                            Text("Analgesici").tag(6)
-                        }
-                    }
+//                    Text("Categoria")
+//                        .font(.title2)
+//                        .fontWeight(.semibold)
+//                        .multilineTextAlignment(.leading)
+//
+//
+//                    VStack(spacing: 20) {
+//                        Picker(selection: $categoria, label: Text("Categoria Medicinale")) {
+//                            Text("Antistaminici").tag(1)
+//                            Text("Antivirali").tag(2)
+//                            Text("Anti-Infiammatori").tag(3)
+//                            Text("Antibiotici").tag(4)
+//                            Text("Antimicotici").tag(5)
+//                            Text("Analgesici").tag(6)
+//                        }
+//                    }
                     
                     Spacer()
                     
@@ -171,20 +174,23 @@ struct NewItemView: View {
                     HStack {
                     
                         Spacer()
+                    Button("Conferma") {
                         
-//                REQUIRED THE MEDICINEVIEWMODEL()
-//                        ******************
-//                    Button("Conferma") {
-//                        MedicineViewModel().addNewMedicine(name: nome, dosage: dosaggio, type: tipologia, price: prezzo, units: Int(unità) ?? 0, category: categoria)
-//
-//                        // add all the boxes of that medicine
-//                        for i in 1...numerobox {
-//                            BoxViewModel().addNewBox(medicine: nome, expirationDate: expirationDate[i-1], state: .usable)
-//                        }
-//
-//                    }
-//                        ******************
+                        medicineViewModel.addNewMedicine(name: nome, dosage: dosaggio, type: tipologia, price: prezzo, units: Int(unità) ?? 0, category: "antistaminico")
                         
+                        
+                        
+                        // add all the boxes of that medicine
+                        for i in 1...numerobox {
+                            boxViewModel.addNewBox(medicine: nome, expirationDate: expirationDate[i-1], state: .usable)
+                            
+                            for item in medicineViewModel.medicines {
+                                print(item.name)
+                                print("***")
+                            }
+                        }
+                        
+                    }
                     .foregroundColor(.white)
                     .padding()
                     .background(Color.accentColor)
@@ -210,9 +216,9 @@ struct NewItemView: View {
 }
 
 
-struct NewItemView_Previews: PreviewProvider {
-    static var previews: some View {
-        NewItemView()
-            .previewDevice("iPhone 13 Pro Max")
-    }
-}
+//struct NewItemView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NewItemView()
+//            .previewDevice("iPhone 13 Pro Max")
+//    }
+//}

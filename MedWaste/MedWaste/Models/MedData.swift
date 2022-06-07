@@ -6,17 +6,80 @@
 //
 
 import Foundation
+import SwiftUI
 
 
-class MedData : Identifiable {
-    var id: String
-    var text : String = ""
+
+struct MedData: Identifiable, Codable {
+
+    let id: UUID
+    var name :String
+    var dosage :String
+    var type :String
+    var price :String
+    var units :Int
+    var category :String
+    var boxes :[MedBox]
     
-//    init(){}
-    init() {
-        id = UUID().uuidString
+    init(id :UUID = UUID(), name :String, dosage :String, type :String, price :String, units :Int, category :String, boxes: [MedBox]) {
+        self.id = id
+        self.name = name
+        self.dosage = dosage
+        self.type = type
+        self.price = price
+        self.units = units
+        self.category = category
+        self.boxes = boxes
     }
+
 }
 
+//extension MedData {
+//
+//    struct Data {
+//        var name :String
+//        var dosage :String
+//        var type :String
+//        var price :String
+//        var units :Int
+//        var category :String
+//       }
+//
+//    var data: Data {
+//        Data(name: name, dosage: dosage, type: type, price: price, units: units, category: category)
+//    }
+//
+//    mutating func update(from data: Data) {
+//        name = data.name
+//        dosage = data.dosage
+//        type = data.type
+//        price = data.price
+//        units = data.units
+//        category = data.category
+//    }
+//
+//    init(data: Data) {
+//
+//        id = UUID()
+//        name = data.name
+//        dosage = data.dosage
+//        type = data.type
+//        price = data.price
+//        units = data.units
+//        category = data.category
+//
+//    }
+//
+//}
+
+extension MedData {
+    
+    static let sampleData: [MedData] =
+    [
+        MedData(name: "Tachipirina", dosage: "100 mg", type: "compresse", price: "9,00 €",  units: 30, category: "antivirale", boxes: [MedBox(medicine: "Tachipirina", expirationDate: Date.now, state: .usable), MedBox(medicine: "Tachipirina", expirationDate: Date.now, state: .usable)]),
+        MedData(name: "Ayrinal", dosage: "100 mg", type: "compresse", price: "10,90 €",  units: 30, category: "antivirale", boxes: [MedBox(medicine: "Ayrinal", expirationDate: Date.now, state: .usable)])
+
+    ]
+}
 
 

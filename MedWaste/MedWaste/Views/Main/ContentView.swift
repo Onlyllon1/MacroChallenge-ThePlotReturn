@@ -16,6 +16,10 @@ extension UIScreen {
 
 
 struct ContentView: View {
+    
+    @StateObject var medicineViewModel = MedicineViewModel()
+    @StateObject var boxViewModel = BoxViewModel()
+    
     init(){
         Theme.navigationBarColors( titleColor: UIColor(CustomColor.darkblue))
         }
@@ -25,7 +29,7 @@ struct ContentView: View {
                 SummaryView()
                     .tabItem {Label("Riepilogo", systemImage: "square.grid.2x2.fill")}
 
-                CabinetView()
+                CabinetView(medicineViewModel: medicineViewModel, boxViewModel: boxViewModel)
                     .tabItem {Label("Armadietto", systemImage: "heart.text.square.fill")}
 
                 StatisticsView()
